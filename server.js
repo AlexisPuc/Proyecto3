@@ -21,7 +21,7 @@ app.get('/', function(req, res) {
 //});
 
 var server = app.listen(8000, function() {
- console.log("listening on port 8000");
+ console.log("Escuchando en el pueto 8000");
 
 });
 
@@ -33,24 +33,24 @@ var io = require('socket.io').listen(server);
 	var noVotes = 0;
 
 io.sockets.on('connection', function (socket) {
-	console.log("We are couting votes!!");
+	console.log("Se estan contando los votos!!");
 	io.emit('sum_yesVotes', {response: yesVotes});
 	io.emit('sum_noVotes', {response: noVotes});
 
 	
 
 	socket.on("vote", function (data){
-	    console.log('Received a new vote of:' + data.newVote);
+	    console.log('Se a recibido un voto de:' + data.newVote);
 	    if (data.newVote == 'newYes') {
 	    	yesVotes += 1;
-	    	console.log("We now have "+ yesVotes +" Yes votes and "+ noVotes +" No votes!");
+	    	console.log("Ahora tenemos "+ yesVotes +" SI votos y "+ noVotes +" NO votos!");
 	    	///socket.emit('votes_response', {response: "Thank you for your vote!"});
 	    	io.emit('sum_yesVotes', {response: yesVotes});
 	    	io.emit('sum_all', {response: (yesVotes + noVotes)});
 	    	return yesVotes;
 	    } else if (data.newVote == 'newNo') {
 	    	noVotes += 1;
-	    	console.log("We now have "+ yesVotes +" Yes votes and "+ noVotes +" No votes!");
+	    	console.log("Ahota tenemos "+ yesVotes +" SI votos y "+ noVotes +" No votos!");
 	    	//socket.emit('votes_response', {response: "Thank you for your vote!"});
 	    	io.emit('sum_noVotes', {response: noVotes});
 	    	io.emit('sum_all', {response: (yesVotes + noVotes)});
@@ -59,7 +59,7 @@ io.sockets.on('connection', function (socket) {
 	});
 
 	socket.on("button_clicked", function (data){
-	    console.log('Someone clicked a button!  Reason: ' + data.reason);
+	    console.log('Alguien selecciono una opcion, reaccion: ' + data.reason);
 	    socket.emit('server_response', {response: "sockets are the best!"});
 	});
 
