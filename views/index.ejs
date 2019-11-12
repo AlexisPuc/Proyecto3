@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Yes/No Buttons</title>
-    <meta name="description" content="A test survey form done using Node.js">
-    <meta name="author" content="Mollie Knute">
+    <title>Proyecto 3</title>
+    <br> <br> <br>
+  
+    <h1 style=" background-color: white; color: black;">LENGUAJES Y AUTOMATAS </h1>
+    <meta name="description" content="voting using Node.js">
+    <meta name="author" content="automatas">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
@@ -70,21 +73,16 @@
 </head>
 <body>
   <div id="results"></div>
-	<h1>¿Es buena la materia de automatas?</h1>
-
-
+  <h1>SISTEMA SENCILLO DE VOTACION</h1>
+	<h2>¿Es buena la materia de automatas?</h2>
       <form class="button-position" id="voteButton">
-            <input type="radio" name="vote" value="yes" id="yesButton"> Yes
+            <p style="background-color: yellow;"> <strong>Opciones</strong> </p>
+            <input type="radio" name="vote" value="yes" id="yesButton"> Yes <br>
             <input type="radio" name="vote" value="no" id="noButton"> No <br />
-      
-
-      <strong>Asi es: </strong><span id="showYesses"></span><br />
-      <strong> Claro que no: </strong><span id="showNos"></span><br />
-
-
+      <p style="background-color: yellow;"> <strong>Resultados</strong> </p>
+      <p style="background-color: seagreen;">Asi es: <span id="showYesses"></span> </p> 
+      <p style="background-color:aquamarine;"> Claro que no: <span id="showNos"></span></p>
       </form>
-
-  <footer>by DragonSlayer</footer>
-
+  <footer><strong> Realizado por los alumnos: <br> luis enrique-- Leonardo Daniel -- Victor Jesus --- Alexis Roberto</strong></footer>
 </body>
 </html>
