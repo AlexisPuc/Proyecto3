@@ -16,7 +16,7 @@
     <script type ="text/javascript">
         $(document).ready(function (){
             // this triggers the connection event in our server!
-            var socket = io.connect('192.168.60.210:8000',{ 'forceNew': true });
+            var socket = io.connect('172.16.12.83:8000',{ 'forceNew': true });
             // we'll write all the socket stuff after the above line!
 
 
@@ -76,6 +76,7 @@
   <h1>SISTEMA SENCILLO DE VOTACION CON SOCKETS</h1>
 	<h2>¿Es buena la materia de automatas?</h2>
       <form class="button-position" id="voteButton"><br/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS6xAUBurtsd-V96UK4uXTvFlVbkiVQmK4beJMWkOGLLwB03vnf" alt="Girl in a jacket" width="200" height="200"><br/>
             <p style="background-color:rgb(29, 28, 28);"> <strong>Opciones</strong> </p>
             <input type="radio" name="vote" value="yes" id="yesButton"> SI <br>
             <input type="radio" name="vote" value="no" id="noButton"> NO <br />
